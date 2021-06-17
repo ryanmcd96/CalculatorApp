@@ -1,0 +1,15 @@
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.csprojAssemblyReference.cache
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\MainWindow.g.cs
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\App.g.cs
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp_MarkupCompile.cache
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp_MarkupCompile.lref
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.exe.config
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.exe
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.pdb
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\MainWindow.baml
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.g.resources
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.Properties.Resources.resources
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.csproj.GenerateResource.cache
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.csproj.CoreCompileInputs.cache
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.exe
+C:\Users\ryanm\source\repos\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.pdb
