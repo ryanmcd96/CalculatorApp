@@ -26,7 +26,7 @@ namespace CalculatorApp
         }
 
         int storedNumber = 0;
-
+        string operation;
         private void btnNine_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -133,6 +133,7 @@ namespace CalculatorApp
             {
                 tbxResult.Text = tbxResult.Text + "1";
             }
+
         }
 
         private void btnZero_Click(object sender, RoutedEventArgs e)
@@ -152,19 +153,47 @@ namespace CalculatorApp
         {
             tbxResult.Text = "0";
             storedNumber = 0;
+            operation = String.Empty;
         }
 
         //stores the added numbers in a variable and outputs the current total
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            if (operation == "-")
+            {
+                storedNumber = storedNumber - int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";
+            }
+            operation = "+";
             storedNumber = int.Parse(tbxResult.Text) + storedNumber;
             tbxResult.Text = "0";
         }
 
         private void btnEqual_Click(object sender, RoutedEventArgs e)
         {
-            storedNumber += int.Parse(tbxResult.Text);
-            tbxResult.Text = storedNumber.ToString();
+            if (operation == "+")
+            {
+                storedNumber = storedNumber + int.Parse(tbxResult.Text);
+                tbxResult.Text = storedNumber.ToString();
+            }
+            else if (operation == "-")
+            {
+                storedNumber -= int.Parse(tbxResult.Text);
+                tbxResult.Text = storedNumber.ToString();
+            }
+        }
+
+        private void btnSub_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "+")
+            {
+                storedNumber = storedNumber + int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";
+            }
+            operation = "-";
+            storedNumber -= storedNumber - int.Parse(tbxResult.Text);
+            tbxResult.Text = "0";
+
         }
     }
 }
