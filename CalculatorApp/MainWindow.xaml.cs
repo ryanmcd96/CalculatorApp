@@ -145,6 +145,7 @@ namespace CalculatorApp
             }
         }
 
+        //clears the textbox and sets it back to 0
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             tbxResult.Text = "0";
