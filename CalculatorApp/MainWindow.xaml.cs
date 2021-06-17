@@ -25,9 +25,11 @@ namespace CalculatorApp
             InitializeComponent();
         }
 
+        int storedNumber = 0;
+
         private void btnNine_Click(object sender, RoutedEventArgs e)
         {
-            if(tbxResult.Text == "0" && tbxResult.Text != null)
+            if (tbxResult.Text == "0" && tbxResult.Text != null)
             {
                 tbxResult.Text = "9";
             }
@@ -149,6 +151,20 @@ namespace CalculatorApp
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             tbxResult.Text = "0";
+            storedNumber = 0;
+        }
+
+        //stores the added numbers in a variable and outputs the current total
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            storedNumber = int.Parse(tbxResult.Text) + storedNumber;
+            tbxResult.Text = "0";
+        }
+
+        private void btnEqual_Click(object sender, RoutedEventArgs e)
+        {
+            storedNumber += int.Parse(tbxResult.Text);
+            tbxResult.Text = storedNumber.ToString();
         }
     }
 }
