@@ -26,7 +26,7 @@ namespace CalculatorApp
         }
 
         int storedNumber = 0;
-        string operation;
+        string operation = String.Empty;
         private void btnNine_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -163,10 +163,14 @@ namespace CalculatorApp
             {
                 storedNumber = storedNumber - int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
+                operation = "+";
             }
-            operation = "+";
-            storedNumber = int.Parse(tbxResult.Text) + storedNumber;
-            tbxResult.Text = "0";
+            else
+            {
+                operation = "+";
+                storedNumber = int.Parse(tbxResult.Text) + storedNumber;
+                tbxResult.Text = "0";
+            }
         }
 
         private void btnEqual_Click(object sender, RoutedEventArgs e)
@@ -189,10 +193,14 @@ namespace CalculatorApp
             {
                 storedNumber = storedNumber + int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
+                operation = "-";
             }
-            operation = "-";
-            storedNumber -= storedNumber - int.Parse(tbxResult.Text);
-            tbxResult.Text = "0";
+            else
+            {
+                operation = "-";
+                storedNumber -= storedNumber - int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";
+            }
 
         }
     }
