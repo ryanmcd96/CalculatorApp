@@ -162,8 +162,13 @@ namespace CalculatorApp
             if (operation == "-")
             {
                 storedNumber = storedNumber - int.Parse(tbxResult.Text);
-                tbxResult.Text = "0";
                 operation = "+";
+                tbxResult.Text = "0";
+            }
+            else if(operation == "=")
+            {
+                operation = "+";
+                tbxResult.Text = "0";
             }
             else
             {
@@ -179,12 +184,14 @@ namespace CalculatorApp
             {
                 storedNumber = storedNumber + int.Parse(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
+                operation = "=";
             }
             else if (operation == "-")
             {
                 storedNumber -= int.Parse(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
-            }
+                operation = "=";
+            }  
         }
 
         private void btnSub_Click(object sender, RoutedEventArgs e)
@@ -194,6 +201,11 @@ namespace CalculatorApp
                 storedNumber = storedNumber + int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
                 operation = "-";
+            }
+            else if (operation == "=")
+            {
+                operation = "-";
+                tbxResult.Text = "0";
             }
             else
             {
