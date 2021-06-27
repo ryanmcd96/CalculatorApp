@@ -24,7 +24,7 @@ namespace CalculatorApp
         {
             InitializeComponent();
         }
-        //stored number int that keeps track of the total after calculations
+        //stored number double that keeps track of the total after calculations
         double storedNumber = 0;
         //string that denotes which operation to perform
         string operation = String.Empty;
@@ -162,29 +162,34 @@ namespace CalculatorApp
         //stores the added numbers in a variable and outputs the current total
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            //if the current operation is a minus, calculation will be carried out and then sets it to addition
             if (operation == "-")
             {
                 storedNumber -= int.Parse(tbxResult.Text);
                 operation = "+";
                 tbxResult.Text = "0";
             }
-            else if(operation == "=")
+            //if the current operation is a equals, sets the operation to addition
+            else if (operation == "=")
             {
                 operation = "+";
                 tbxResult.Text = "0";
             }
+            //if the current operation is multiply, calculation will be carried out and then sets it to addition
             else if (operation == "*")
             {
                 storedNumber *= int.Parse(tbxResult.Text);
                 operation = "+";
                 tbxResult.Text = "0";
             }
+            //if the current operation is divide, calculation will be carried out and then sets it to addition
             else if (operation == "/")
             {
                 storedNumber /= Convert.ToDouble(tbxResult.Text);
                 operation = "+";
                 tbxResult.Text = "0";
             }
+            //addition is carried out and operation is set to addition
             else
             {
                 operation = "+";
@@ -195,56 +200,66 @@ namespace CalculatorApp
 
         private void btnEqual_Click(object sender, RoutedEventArgs e)
         {
+            //if operation is an add, addition is performed, result displayed on screen then operation is set to equals
             if (operation == "+")
             {
                 storedNumber += int.Parse(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
                 operation = "=";
             }
+            //if operation is minus, subtraction is performed, result displayed on screen then operation is set to equals
             else if (operation == "-")
             {
                 storedNumber -= int.Parse(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
                 operation = "=";
-            }  
+            }
+            //if operation is multiply, multiplication is performed, result displayed on screen then operation is set to equals
             else if (operation == "*")
             {
                 storedNumber *= int.Parse(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
                 operation = "=";
             }
+            //if operation is divide, division is performed, result displayed on screen then operation is set to equals
             else if (operation == "/")
             {
                 storedNumber /= Convert.ToDouble(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
+                operation = "=";
             }
         }
 
         private void btnSub_Click(object sender, RoutedEventArgs e)
         {
+            //if the current operation is an add, calculation will be carried out and then sets it to minus
             if (operation == "+")
             {
                 storedNumber += int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
                 operation = "-";
             }
+            //if the current operation is a equals, sets the operation to minus
             else if (operation == "=")
             {
                 operation = "-";
                 tbxResult.Text = "0";
             }
+            //if the current operation is multiply, calculation will be carried out and then sets it to minus
             else if (operation == "*")
             {
                 storedNumber *= int.Parse(tbxResult.Text);
                 operation = "-";
                 tbxResult.Text = "0";
             }
+            //if the current operation is divide, calculation will be carried out and then sets it to minus
             else if (operation == "/")
             {
                 storedNumber /= Convert.ToDouble(tbxResult.Text);
                 operation = "-";
                 tbxResult.Text = "0";
             }
+            //subtraction is carried out and operation is set to minus
             else
             {
                 operation = "-";
@@ -256,29 +271,34 @@ namespace CalculatorApp
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
+            //if the current operation is an add, calculation will be carried out and then sets it to multiply
             if (operation == "+")
             {
                 storedNumber += int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
                 operation = "*";
             }
+            //if the current operation is a equals, sets the operation to multiply
             else if (operation == "=")
             {
                 operation = "*";
                 tbxResult.Text = "0";
             }
+            //if the current operation is a minus, calculation will be carried out and then sets it to multiply
             else if (operation == "-")
             {
                 storedNumber -= int.Parse(tbxResult.Text);
                 operation = "*";
                 tbxResult.Text = "0";
             }
+            //if the current operation is divide, calculation will be carried out and then sets it to multiply
             else if (operation == "/")
             {
                 storedNumber /= Convert.ToDouble(tbxResult.Text);
                 operation = "*";
                 tbxResult.Text = "0";
             }
+            //multiplication is carried out and operation is set to multiply
             else
             {
                 operation = "*";
@@ -289,23 +309,34 @@ namespace CalculatorApp
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
+            //if the current operation is an add, calculation will be carried out and then sets it to divide
             if (operation == "+")
             {
                 storedNumber += int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
                 operation = "/";
             }
+            //if the current operation is a equals, sets the operation to divide
             else if (operation == "=")
             {
                 operation = "/";
                 tbxResult.Text = "0";
             }
+            //if the current operation is a minus, calculation will be carried out and then sets it to divide
             else if (operation == "-")
             {
                 storedNumber -= int.Parse(tbxResult.Text);
                 operation = "/";
                 tbxResult.Text = "0";
             }
+            //if the current operation is multiply, calculation will be carried out and then sets it to divide
+            else if (operation == "*")
+            {
+                storedNumber *= int.Parse(tbxResult.Text);
+                operation = "/";
+                tbxResult.Text = "0";
+            }
+            //division is carried out and operation is set to divide
             else
             {
                 operation = "/";
