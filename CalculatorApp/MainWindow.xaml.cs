@@ -24,9 +24,12 @@ namespace CalculatorApp
         {
             InitializeComponent();
         }
-
-        int storedNumber = 0;
+        //stored number int that keeps track of the total after calculations
+        double storedNumber = 0;
+        //string that denotes which operation to perform
         string operation = String.Empty;
+
+        //inputs a nine in the textbox
         private void btnNine_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -38,7 +41,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "9";
             }
         }
-
+        //inputs a eight in the textbox
         private void btnEight_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -50,7 +53,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "8";
             }
         }
-
+        //inputs a seven in the textbox
         private void btnSeven_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -62,7 +65,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "7";
             }
         }
-
+        //inputs a six in the textbox
         private void btnSix_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -74,7 +77,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "6";
             }
         }
-
+        //inputs a five in the textbox
         private void btnFive_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -86,7 +89,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "5";
             }
         }
-
+        //inputs a four in the textbox
         private void btnFour_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -98,7 +101,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "4";
             }
         }
-
+        //inputs a three in the textbox
         private void btnThree_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -110,7 +113,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "3";
             }
         }
-
+        //inputs a two in the textbox
         private void btnTwo_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -122,7 +125,7 @@ namespace CalculatorApp
                 tbxResult.Text = tbxResult.Text + "2";
             }
         }
-
+        //inputs a one in the textbox
         private void btnOne_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -135,7 +138,7 @@ namespace CalculatorApp
             }
 
         }
-
+        //inputs a zero in the textbox
         private void btnZero_Click(object sender, RoutedEventArgs e)
         {
             if (tbxResult.Text == "0" && tbxResult.Text != null)
@@ -176,6 +179,12 @@ namespace CalculatorApp
                 operation = "+";
                 tbxResult.Text = "0";
             }
+            else if (operation == "/")
+            {
+                storedNumber /= Convert.ToDouble(tbxResult.Text);
+                operation = "+";
+                tbxResult.Text = "0";
+            }
             else
             {
                 operation = "+";
@@ -204,6 +213,11 @@ namespace CalculatorApp
                 tbxResult.Text = storedNumber.ToString();
                 operation = "=";
             }
+            else if (operation == "/")
+            {
+                storedNumber /= Convert.ToDouble(tbxResult.Text);
+                tbxResult.Text = storedNumber.ToString();
+            }
         }
 
         private void btnSub_Click(object sender, RoutedEventArgs e)
@@ -222,6 +236,12 @@ namespace CalculatorApp
             else if (operation == "*")
             {
                 storedNumber *= int.Parse(tbxResult.Text);
+                operation = "-";
+                tbxResult.Text = "0";
+            }
+            else if (operation == "/")
+            {
+                storedNumber /= Convert.ToDouble(tbxResult.Text);
                 operation = "-";
                 tbxResult.Text = "0";
             }
@@ -253,11 +273,44 @@ namespace CalculatorApp
                 operation = "*";
                 tbxResult.Text = "0";
             }
+            else if (operation == "/")
+            {
+                storedNumber /= Convert.ToDouble(tbxResult.Text);
+                operation = "*";
+                tbxResult.Text = "0";
+            }
             else
             {
                 operation = "*";
                 storedNumber = int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";           
+            }
+        }
+
+        private void btnDivide_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "+")
+            {
+                storedNumber += int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";
+                operation = "/";
+            }
+            else if (operation == "=")
+            {
+                operation = "/";
+                tbxResult.Text = "0";
+            }
+            else if (operation == "-")
+            {
+                storedNumber -= int.Parse(tbxResult.Text);
+                operation = "/";
+                tbxResult.Text = "0";
+            }
+            else
+            {
+                operation = "/";
+                storedNumber = int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";
             }
         }
     }

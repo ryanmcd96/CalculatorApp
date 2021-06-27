@@ -13,21 +13,22 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="tbxResult" HorizontalAlignment="Left" Height="50" Margin="80.4,32,0,0" VerticalAlignment="Top" Width="600" Grid.Column="1" Text="0" FontSize="36" FontFamily="Microsoft Sans Serif" RenderTransformOrigin="0.5,0.5" TextAlignment="Right" IsReadOnly="True" />
-        <Button x:Name="btnNine" Content="9" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnNine_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnEight" Content="8" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnEight_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnSeven" Content="7" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSeven_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnSix" Content="6" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSix_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnFive" Content="5" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnFive_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnFour" Content="4" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnFour_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnThree" Content="3" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnThree_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnTwo" Content="2" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnTwo_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnOne" Content="1" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnOne_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnZero" Content="0" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnZero_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnClear" Content="C" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnClear_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnAdd" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnAdd_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnEqual" Content="=" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnEqual_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnSub" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSub_Click" RenderTransformOrigin="0.495,-0.06"/>
-        <Button x:Name="btnMultiply" Content="*" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnMultiply_Click" RenderTransformOrigin="0.495,-0.06"/>
+        <Button x:Name="btnNine" Content="9" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnNine_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnEight" Content="8" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnEight_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnSeven" Content="7" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSeven_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnSix" Content="6" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSix_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnFive" Content="5" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnFive_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnFour" Content="4" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnFour_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnThree" Content="3" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnThree_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnTwo" Content="2" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnTwo_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnOne" Content="1" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnOne_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnZero" Content="0" Grid.Column="1" HorizontalAlignment="Left" Margin="290.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnZero_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnClear" Content="C" Grid.Column="1" HorizontalAlignment="Left" Margin="149.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnClear_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnAdd" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnAdd_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnEqual" Content="=" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnEqual_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnSub" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSub_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnMultiply" Content="*" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnMultiply_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
+        <Button x:Name="btnDivide" Content="/" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,111,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnDivide_Click" RenderTransformOrigin="0.495,-0.06" FontSize="20"/>
         
     </Grid>
 </Window>
