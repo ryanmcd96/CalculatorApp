@@ -27,5 +27,7 @@
         <Button x:Name="btnAdd" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,183,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnAdd_Click" RenderTransformOrigin="0.495,-0.06"/>
         <Button x:Name="btnEqual" Content="=" Grid.Column="1" HorizontalAlignment="Left" Margin="427.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnEqual_Click" RenderTransformOrigin="0.495,-0.06"/>
         <Button x:Name="btnSub" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,259,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnSub_Click" RenderTransformOrigin="0.495,-0.06"/>
+        <Button x:Name="btnMultiply" Content="*" Grid.Column="1" HorizontalAlignment="Left" Margin="600.4,337,0,0" VerticalAlignment="Top" Width="80" Height="50" Click="btnMultiply_Click" RenderTransformOrigin="0.495,-0.06"/>
+        
     </Grid>
 </Window>

@@ -161,12 +161,18 @@ namespace CalculatorApp
         {
             if (operation == "-")
             {
-                storedNumber = storedNumber - int.Parse(tbxResult.Text);
+                storedNumber -= int.Parse(tbxResult.Text);
                 operation = "+";
                 tbxResult.Text = "0";
             }
             else if(operation == "=")
             {
+                operation = "+";
+                tbxResult.Text = "0";
+            }
+            else if (operation == "*")
+            {
+                storedNumber *= int.Parse(tbxResult.Text);
                 operation = "+";
                 tbxResult.Text = "0";
             }
@@ -182,7 +188,7 @@ namespace CalculatorApp
         {
             if (operation == "+")
             {
-                storedNumber = storedNumber + int.Parse(tbxResult.Text);
+                storedNumber += int.Parse(tbxResult.Text);
                 tbxResult.Text = storedNumber.ToString();
                 operation = "=";
             }
@@ -192,18 +198,30 @@ namespace CalculatorApp
                 tbxResult.Text = storedNumber.ToString();
                 operation = "=";
             }  
+            else if (operation == "*")
+            {
+                storedNumber *= int.Parse(tbxResult.Text);
+                tbxResult.Text = storedNumber.ToString();
+                operation = "=";
+            }
         }
 
         private void btnSub_Click(object sender, RoutedEventArgs e)
         {
             if (operation == "+")
             {
-                storedNumber = storedNumber + int.Parse(tbxResult.Text);
+                storedNumber += int.Parse(tbxResult.Text);
                 tbxResult.Text = "0";
                 operation = "-";
             }
             else if (operation == "=")
             {
+                operation = "-";
+                tbxResult.Text = "0";
+            }
+            else if (operation == "*")
+            {
+                storedNumber *= int.Parse(tbxResult.Text);
                 operation = "-";
                 tbxResult.Text = "0";
             }
@@ -214,6 +232,33 @@ namespace CalculatorApp
                 tbxResult.Text = "0";
             }
 
+        }
+
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "+")
+            {
+                storedNumber += int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";
+                operation = "*";
+            }
+            else if (operation == "=")
+            {
+                operation = "*";
+                tbxResult.Text = "0";
+            }
+            else if (operation == "-")
+            {
+                storedNumber -= int.Parse(tbxResult.Text);
+                operation = "*";
+                tbxResult.Text = "0";
+            }
+            else
+            {
+                operation = "*";
+                storedNumber = int.Parse(tbxResult.Text);
+                tbxResult.Text = "0";           
+            }
         }
     }
 }
